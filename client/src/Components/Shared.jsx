@@ -4,13 +4,11 @@ const Acc = ({ tab, setTab, children }) => {
   return (
     <div className="page">
       <div className="card">
-        {/* Header */}
         <div className="card-header">
           <h1>My Account</h1>
           <p>Welcome back!</p>
         </div>
 
-        {/* Tabs */}
         <div className="tabs">
           <div className={`tab-indicator ${tab}`}></div>
 
@@ -26,9 +24,14 @@ const Acc = ({ tab, setTab, children }) => {
           >
             Register
           </button>
+          <button
+            className={`tab ${tab === "account" ? "active" : ""}`}
+            onClick={() => setTab("account")}
+          >
+            Manage Account
+          </button>
         </div>
 
-        {/* Page Content */}
         <div className="form">{children}</div>
       </div>
     </div>
