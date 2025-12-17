@@ -20,6 +20,12 @@ const Acc = ({ tab, setTab, children }) => {
           >
             Login
           </button>
+          <button
+            className={`tab ${tab === "register" ? "active" : ""}`}
+            onClick={() => setTab("register")}
+          >
+            Register
+          </button>
         </div>
 
         {/* Page Content */}
